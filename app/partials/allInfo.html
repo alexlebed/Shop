@@ -2,15 +2,15 @@
 <table class="table table-hover">
 	<thead>
 		<tr>
-			<th>Name</th>
-			<th>Value</th>
-			<th>Dell</th>
+			<th>Найминование</th>
+			<th>Количество</th>
+			<th>Удалить</th>
 		</tr>
 	</thead>
 	<tr ng-repeat="(key, value) in amount  | orderBy:'value'" ng-model="amount[key]">
 		<td>{{key}}</td>
 		<td>{{value}}</td>
-		<td><button class="btn btn-default" ng-click="dell(value, key)">Dell</button></td>
+		<td><button class="btn btn-default" ng-click="dell(value, key)">Удалить</button></td>
 	</tr>		 
  </table>
  </div>
