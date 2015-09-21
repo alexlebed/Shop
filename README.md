@@ -2,6 +2,10 @@ Precondition: <br>
 -node <br>
 -gulp <br>
 <br>
-Start <br>
-npm install  "D:\test>npm install" <br>
-gulp  "D:\test>gulp"
+For start: <br>
+npm install  <br>
+gulp  <br>
+
+Example: <br>
+"D:\test>npm install" <br>
+"D:\test>gulp"
