@@ -3,18 +3,25 @@
 	<table class="table table-hover">
 		<thead>
 			<tr>
-				<th>Найминование</th>
-				<th>Количество остатка</th>
-				<th>количество</th>
+				<th ng-click="sort('name')" class="forclick">Найминование
+				    <i class="glyphicon" ng-class="{'glyphicon-chevron-up': isSortUp('name'), 'glyphicon-chevron-down': isSortDown('name')}"></i>
+				</th>
+				<th ng-click="sort('value')" class="forclick">Количество остатка
+				     <i class="glyphicon" ng-class="{'glyphicon-chevron-up': isSortUp('value'), 'glyphicon-chevron-down': isSortDown('value')}"></i>
+				</th>
+				<th>Количество</th>
+				<th>Цена</th>
 				<th>Заказать</th>
 			</tr>
 		</thead>
-		<tr ng-repeat="item in items | filter:query">
+		<tr ng-repeat="item in items | filter:query | orderBy:sortField:reverse">
 			<td ng-click="showMore(item)" class="forclick">{{item.name}}</td>
 			<td ng-model="items">{{item.value}}</td>
+			
 			<td>
 				<select class="form-control" ng-model="item.order" ng-options="item for item in opt(item)"></select>
 			</td>
+			<td ng-model="items">{{item.price}}</td>
 			<td><button class="btn btn-default" ng-click="showAll(item)">Заказать</button></td>
 
 		</tr>
